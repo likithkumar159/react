@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Scrollbar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+
+    <style>
+        /* Example SimpleBar custom styles */
+        .simplebar-scrollbar::before {
+            background-color: #888;
+            border-radius: 6px;
+        }
+
+        .simplebar-track {
+            background: #f1f1f1;
+        }
+
+        .simplebar-scrollbar:hover::before {
+            background-color: #555;
+        }
+
+        .simplebar-horizontal .simplebar-scrollbar::before {
+            height: 2px;
+            /* Reduce height of the horizontal scrollbar */
+        }
+
+        .simplebar-vertical .simplebar-scrollbar::before {
+            width: 12px;
+            /* Width of the vertical scrollbar */
+        }
+
+        .content {
+            height: 200px;
+            width: 400px;
+            overflow: auto;
+            /* Enable both vertical and horizontal scrolling */
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content" data-simplebar>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet...</p>
+        <!-- Add more content here to enable scrolling -->
+    </div>
+</body>
+
+</html>

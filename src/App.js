@@ -1,13 +1,15 @@
+import './assets/fonts/responsive.css'
 import './App.css';
-import ParentComponent from './Components/ParentComponent';
-import Requirements from './Components/Requirements';
+import Requirements from './components/Requirements';
+import './assets/icons/style.css';
+import { Filteruniversal } from './components/Filteruni_context';
+
 
 function App() {
   return (
-    <>
-      <Requirements/>
-      {/* <ParentComponent/> */}
-    </>
+    <Filteruniversal>
+      <Requirements />
+    </Filteruniversal>
   );
 }
 

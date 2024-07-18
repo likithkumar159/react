@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Funding_module = () => {
+    var reqTotal = JSON.parse(localStorage.getItem("totalReq"));
     return (
         <div className='fundeed'>
             <div className='funded'>
@@ -23,6 +24,7 @@ const Funding_module = () => {
                         <h2 className='fw600'>FUNDED</h2>
                         <h2 className='fw600 funded_textcolor'>$10,000.00</h2>
                     </div>
+                    <div className='hr-divided_line'></div>
                     <div>
                         <h2 className='fw600'>UNFUNDED</h2>
                         <h2 className='fw600 unfunded_textcolor'>$5,000.00</h2>

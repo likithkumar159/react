@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    /* font-family:; */
+}
+:root{
+    --highlight-color:#00C2FF;
+}
+body{
+    /* width: 1920px;
+    height: 1024px; */
+}
+body{
+    background-color: #e3e3e3ad;
+}
+.d-flex{
+    display: flex;
+}
+.main_header{
+    height: 80px;
+}
+.logo_div{
+    width: 22%;
+    display: flex;
+    background-color: #121617;
+    padding: 10px;
+}
+.logo_div div img{
+    width: 45px;
+    height: 45px;
+}
+.logo_div div h5,.logo_div div h6{
+    color: white;
+    margin: 0;
+    padding: 5px 0px;
+    font-weight:bolder;
+    letter-spacing: 1px;
+}
+.header_div{
+    width: 78%;
+}
+.logo_div div h6{
+    color: var(--highlight-color);
+    border-top: 1px solid #636363;
+}
+.logo_div div:nth-child(2){
+    margin: 0px 0px 0px 10px;
+}
+.header_div .base_div{
+    width: 500px;
+    height: 50px;
+    border:1px dashed var(--highlight-color);
+    border-top: 0px;
+}
+/* .header_div div{
+    float: right;
+} */
+.header_div{
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-color: white;
+}
+.base_div div{
+/* margin: -25px 10px; */
+}
+.base_div div div{
+    background-color: #0472E1;
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.front_view{
+    position: relative;
+    z-index: 50;
+}
+.navigation{
+    width: 22%;
+    background-color: #121617;
+    padding:10px;
+}
+.page_body{
+    width: 78%;
+}
+.page_header{
+    width: 100%;
+    background-color: white;
+    height: 50px;
+}
+section.page_body section.d-flex div{
+    margin: 10px 5px;
+} 
+.page_body_inside{
+    width: 70%;
+    background-color: white;
+    border-radius: 5px;
+}
+table{
+    width: 100%;
+    border-spacing: 0;
+    padding: 5px;
+}
+table .table_head{
+    background-color: #0A2E64;
+    height: 30px;
+}
+table .table_head tr th:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+table .table_head tr th:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+table tbody tr td:first-child{
+    background-color: red;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+table tbody tr td:last-child{
+    background-color: red;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+table .table_head tr th{
+    color: white;
+    font-size: 12px;
+}
+.right_menu{
+    width: 30%;
+    background-color: white;
+    padding: 5px;
+}
+div label,div input{
+    display: block;
+}
