@@ -264,7 +264,7 @@
       "Unit_Priority": "-",
       "Req_Amount": 49000,
       "Submitted": "04/12/23",
-      "Status": "Waiting for Unit"
+      "Status": "Waiting for unit"
     },
     {
       "id": "20",
@@ -278,7 +278,7 @@
       "Unit_Priority": "-",
       "Req_Amount": 49000,
       "Submitted": "04/12/24",
-      "Status": "Waiting for Unit"
+      "Status": "Waiting for unit"
     },
     {
       "id": "21",
@@ -292,7 +292,7 @@
       "Unit_Priority": "-",
       "Req_Amount": 49000,
       "Submitted": "04/12/24",
-      "Status": "Waiting for Unit"
+      "Status": "Waiting for unit"
     },
     {
       "id": "22",

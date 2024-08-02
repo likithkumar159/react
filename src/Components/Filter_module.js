@@ -4,7 +4,7 @@ import Funding_module from './Funding_module'
 import { Filteruni_context } from './Filteruni_context'
 
 const Filter_module = () => {
-    const { searchData, setSearchData, data } = useContext(Filteruni_context)
+    const { searchData, setSearchData, data ,statusCount} = useContext(Filteruni_context)
     const [inputvalue, setInputValue] = useState("");
     const [filters, setFilters] = useState({
         year: "All",
@@ -31,14 +31,14 @@ const Filter_module = () => {
             setSearchData(searchedData);
         }
     };
-    const totalrequirements = superfilterdata.reduce((previousamount, currentamount) => {
+    const totalrequirements = searchData.reduce((previousamount, currentamount) => {
         return (
             previousamount + (currentamount.Req_Amount === "-" ? 0 : currentamount.Req_Amount)
         );
 
     }, 0)
 
-    const totalnumber = superfilterdata.length
+    const totalnumber = searchData.length
 
     const handleyearchange = (e) => {
         const year = e.target.value;
@@ -127,6 +127,7 @@ const Filter_module = () => {
             setSearchData(searchedData);
         }
     }
+
     const handlereset = () => {
         setFilters({
             inputvalue: "",
@@ -280,12 +281,12 @@ const Filter_module = () => {
                         {/* <Kip_cards/> *
                     </div> */}
                     <div className='card2'>
-                        <Kip_cards num="15" value="Waiting for unit" name="UNIT" cards_background_color="kpcard1" cards_color="kpcards1" />
-                        <Kip_cards num="20" value="Waiting for FMB" name="FMB" cards_background_color="kpcard2" cards_color="kpcards2" />
-                        <Kip_cards num="20" value="Waiting for NAF PANEL" name="NAF PANEL" cards_background_color="kpcard3" cards_color="kpcards3" />
-                        <Kip_cards num="10" value="Waiting for AETC Group" name="AETC GROUP" cards_background_color="kpcard4" cards_color="kpcards4" />
-                        <Kip_cards num="10" value="Waiting for BOARD" name="BOARD" cards_background_color="kpcard5" cards_color="kpcards5" />
-                        <Kip_cards num="10" value="Waiting for COUNCIL" name="COUNCIL" cards_background_color="kpcard6" cards_color="kpcards6" />
+                        <Kip_cards num={statusCount['Waiting for unit']} value="Waiting for unit" name="UNIT" cards_background_color="kpcard1" cards_color="kpcards1" />
+                        <Kip_cards num={statusCount['Waiting for FMB']} value="Waiting for FMB" name="FMB" cards_background_color="kpcard2" cards_color="kpcards2" />
+                        <Kip_cards num={statusCount['Waiting for NAF PANEL']} value="Waiting for NAF PANEL" name="NAF PANEL" cards_background_color="kpcard3" cards_color="kpcards3" />
+                        <Kip_cards num={statusCount['Waiting for AETC Group']} value="Waiting for AETC Group" name="AETC GROUP" cards_background_color="kpcard4" cards_color="kpcards4" />
+                        <Kip_cards num={statusCount['Waiting for BOARD']} value="Waiting for BOARD" name="BOARD" cards_background_color="kpcard5" cards_color="kpcards5" />
+                        <Kip_cards num={statusCount['Waiting for COUNCIL']} value="Waiting for COUNCIL" name="COUNCIL" cards_background_color="kpcard6" cards_color="kpcards6" />
                     </div>
                 </div>
                 <div>

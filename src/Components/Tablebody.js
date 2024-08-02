@@ -45,8 +45,8 @@ const Tablebody = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {
-                        (searchData.length > 0 ? searchData : data).map((item) => (
+                    {(searchData.length)?(
+                        (searchData).map((item) => (
                             <tr key={item.id}>
                                 <td><input type="checkbox" checked={checkedData.includes(item)} onChange={(e) => handleCheck(e, item)} /></td>
                                 <td>{item.title}
@@ -63,6 +63,11 @@ const Tablebody = () => {
                                 <td>{item.Status}</td>
                             </tr>
                         ))
+                    ):(
+                        <tr>
+                            <td colSpan="11">NO DATA FOUND</td>
+                        </tr>
+                    )
                     }
                 </tbody>
             </table>
